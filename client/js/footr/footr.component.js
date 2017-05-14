@@ -1,9 +1,9 @@
 (function() {
 
   angular.module('app')
-    .component('header', {
+    .component('footr', {
       controller: controller,
-      templateUrl: './js/header/header.html'
+      templateUrl: './js/footr/footr.html'
     })
 
     function controller(){
