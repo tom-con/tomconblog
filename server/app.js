@@ -5,23 +5,18 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
 
-const index = require('./routes/index')
 const posts = require('./routes/posts');
+const bcrypt = require('bcryptjs');
 
-
-
-
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/../client')))
+app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
-app.use('/index', index)
 app.use('/api/posts', posts)
 
-app.use('*', function (req, res) {                            // <--- #2
+app.use('*', function(req, res) {
   res.sendFile('index.html', {
     root: path.join(__dirname, '/../client')
   })
