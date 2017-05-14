@@ -15,29 +15,37 @@
       })
       .state('headr', {
         name: 'headr',
-        url: '/',
+        abstract:true,
         parent: 'layout',
         component: 'headr',
       })
       .state('navbar', {
         name: 'navbar',
-        url: '/',
+        abstract:true,
+        parent:'headr',
         component: 'navbar',
       })
       .state('content', {
         name: 'content',
-        url: '/',
+        abstract:true,
         parent: 'layout',
         component: 'content',
       })
       .state('splash', {
-        name: 'content.splash',
+        name: 'splash',
         url: '/',
+        parent:'content',
         component: 'splash',
+      })
+      .state('blog', {
+        name: 'blog',
+        url: '/blog',
+        parent:'content',
+        component: 'blog',
       })
       .state('footr', {
         name: 'footr',
-        url: '/',
+        abstract:true,
         parent: 'layout',
         component: 'footr',
       })
