@@ -13,6 +13,12 @@
         abstract: true,
         component: 'layout',
       })
+      .state({
+        name: 'header',
+        url: '/',
+        parent: 'layout',
+        component: 'header',
+      })
   }
 
 }());

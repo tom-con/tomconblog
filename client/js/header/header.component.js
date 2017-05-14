@@ -1,13 +1,14 @@
 (function() {
 
   angular.module('app')
-    .component('layout', {
+    .component('header', {
       controller: controller,
-      templateUrl: './js/layout/layout.html'
+      templateUrl: './js/header/header.html'
     })
 
     function controller(){
       const vm = this
+      console.log("got me");
     }
 
 }())
