@@ -192,10 +192,10 @@ h5 {
   font-size: 1.25rem;
 }
 a {
-  color: #bd1550;
+  color: #780d33;
 }
 a:hover {
-  color: #e93675;
+  color: #bd1550;
 }
 .lead {
   font-weight: 300;
@@ -259,6 +259,9 @@ a:hover {
   font-weight: normal;
 }
 #head .tagline a {
+  color: #780d33;
+}
+#head .tagline a:hover {
   color: #bd1550;
 }
 .home #head {
