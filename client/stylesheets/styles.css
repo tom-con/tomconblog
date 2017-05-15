@@ -225,7 +225,7 @@ a:hover {
 
 **********************************************************************/
 #head {
-  background: #f4f4f4 url(/images/everest.jpg) bottom center;
+  background: #f4f4f4 url(/images/everest.jpg) top center;
   background-size: cover;
   color: #7C7C7C;
   padding: 30px 0 35px 0;
@@ -252,14 +252,14 @@ a:hover {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.2em;
-  color: #7C7C7C;
+  color: #000000;
   margin: 5px 0 0;
 }
 #head .tagline b {
   font-weight: normal;
 }
 #head .tagline a {
-  color: #5E5E5E;
+  color: #bd1550;
 }
 .home #head {
   padding: 90px 0;

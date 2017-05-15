@@ -1,4 +1,5 @@
 (function() {
+  'use strict'
 
   angular.module('app')
     .component('blog', {
@@ -6,8 +7,19 @@
       templateUrl: './js/blog/blog.html'
     })
 
-    function controller(){
-      const vm = this
+  controller.$inject = ['blogService']
+  function controller(blogService) {
+    const vm = this
+    vm.$onInit = onInit
+
+    function onInit() {
+      getPosts()
     }
 
+    function getPosts() {
+      blogService.getPosts().then(posts => {
+        vm.posts = posts
+      })
+    }
+  }
 }())

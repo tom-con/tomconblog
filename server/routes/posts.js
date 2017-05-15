@@ -1,9 +1,21 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const knex = require('../db/knex.js')
 
-/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  knex('posts')
+    .then((posts) => {
+      res.status(200).send(posts);
+    })
+});
+
+router.get('/:id', function(req, res, next) {
+  knex('posts')
+    .where('id', req.params.id)
+    .first()
+    .then((post) => {
+      res.status(200).send(post);
+    })
 });
 
 module.exports = router;
