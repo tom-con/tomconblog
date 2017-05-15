@@ -43,6 +43,12 @@
         parent:'content',
         component: 'blog',
       })
+      .state('projects', {
+        name: 'projects',
+        url: '/projects',
+        parent:'content',
+        component: 'projects',
+      })
       .state('footr', {
         name: 'footr',
         abstract:true,
