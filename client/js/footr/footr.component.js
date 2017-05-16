@@ -8,7 +8,6 @@
 
     function controller(){
       const vm = this
-      console.log("got me");
     }
 
 }())

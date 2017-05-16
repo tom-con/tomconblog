@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row section recentworks topspace">
+
+    <h2 class="section-title"><span>My Projects</span></h2>
+
+    <div class="thumbnails recentworks row">
+
+      <div ng-repeat="project in $ctrl.projects" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <a class="thumbnail" href="sidebar-right.html">
+          <span class="img">
+            <img src="{{ project.image_url }}" alt="">
+            <span class="cover"><span class="more">See details &rarr;</span></span>
+          </span>
+          <span class="title">{{ project.title }} - {{ project.tagline }}</span>
+        </a>
+        <span class="details"><a href="{{ project.deployment_url }}">Deployment</a> | <a href="{{ project.github_url }}">Github</a></span>
+        <h4></h4>
+        <p>{{ project.description }}</p>
+      </div>
+
+      <!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <a class="thumbnail" href="sidebar-right.html">
+          <span class="img">
+            <img src="/images/findHope.png" alt="">
+            <span class="cover"><span class="more">See details &rarr;</span></span>
+          </span>
+          <span class="title">findHope - connecting to help</span>
+        </a>
+        <span class="details"><a href="http://tom-con-findhope.surge.sh/">Deployment</a> | <a href="https://github.com/tom-con/findHope">Github</a></span>
+        <h4></h4>
+        <p>A web app that links cancer patients to National Cancer Institute clinical trials based on patient eligibility and location. It also gives information about principal investigators and whether the trial is accepting volunteers.</p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <a class="thumbnail" href="sidebar-right.html">
+          <span class="img">
+            <img src="/images/mosaix.png" alt="">
+            <span class="cover"><span class="more">See details &rarr;</span></span>
+          </span>
+          <span class="title">Mosaix - pixel art social network</span>
+        </a>
+        <span class="details"><a href="http://mosaix.herokuapp.com/">Deployment</a> | <a href="https://github.com/tom-con/mosaix">Github</a></span>
+        <h4></h4>
+        <p>A web app with full CRUD ability built on RESTful principles that allows 2D game developers to create/edit/share sprites within a niche social network.</p>
+      </div> -->
+
+  </div>
+</div>

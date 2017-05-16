@@ -192,10 +192,10 @@ h5 {
   font-size: 1.25rem;
 }
 a {
-  color: #780d33;
+  color: #bd1550;
 }
 a:hover {
-  color: #bd1550;
+  color: #f392b4;
 }
 .lead {
   font-weight: 300;
@@ -258,11 +258,12 @@ a:hover {
 #head .tagline b {
   font-weight: normal;
 }
+
 #head .tagline a {
-  color: #780d33;
+  color: #bd1550;
 }
 #head .tagline a:hover {
-  color: #bd1550;
+  color: #f392b4;
 }
 .home #head {
   padding: 90px 0;
@@ -492,6 +493,7 @@ img {
   color: #000000;
   background: none;
 }
+
 /*********************************************************************
 
 

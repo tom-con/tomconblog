@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const posts = require('./routes/posts');
+const projects = require('./routes/projects');
 const bcrypt = require('bcryptjs');
 
 app.use(logger('dev'));
@@ -15,6 +16,7 @@ app.use(express.static(path.join(__dirname, '/../client')))
 app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 
 app.use('/api/posts', posts)
+app.use('/api/projects', projects)
 
 app.use('*', function(req, res) {
   res.sendFile('index.html', {
