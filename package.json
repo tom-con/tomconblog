@@ -13,7 +13,7 @@
         "node": "v7.7.2"
     },
     "dependencies": {
-        "@uirouter/angularjs": "^1.0.3",
+        "angular-ui-router": "^1.0.3",
         "angular": "^1.6.4",
         "bcryptjs": "^2.4.3",
         "body-parser": "~1.16.0",
