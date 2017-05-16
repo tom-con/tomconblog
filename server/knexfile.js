@@ -6,10 +6,10 @@ module.exports = {
       database: process.env.DATABASE_URL || 'tomconblog',
     }
   },
-  production: {
-    client: 'pg',
-    connection: {
-      database: process.env.DATABASE_URL,
+  {
+    "production": {
+      "client": "pg",
+      "connection": process.env.DATABASE_URL
     }
   },
 };
