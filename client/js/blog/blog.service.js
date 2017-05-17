@@ -17,7 +17,6 @@
     }
     function addPost(data){
       return $http.post('/api/posts', data).then(post => {
-        console.log(post);
         return post.data
       })
     }

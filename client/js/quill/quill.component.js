@@ -21,6 +21,9 @@
         $state.go(`/blog/${post.id}`)
       })
     }
+    function imageHandler(image){
+      console.log("hello", image);
+    }
   }
 
 }())

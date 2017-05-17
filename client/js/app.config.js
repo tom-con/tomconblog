@@ -3,9 +3,18 @@
 
   angular.module('app').config(config)
 
-  config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
+  config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', 'ngQuillConfigProvider']
 
-  function config($stateProvider, $urlRouterProvider, $locationProvider) {
+  function config($stateProvider, $urlRouterProvider, $locationProvider, ngQuillConfigProvider) {
+    console.log(ngQuillConfigProvider);
+    function imageHandler(image){
+      console.log("hi");
+      console.log(image);
+    }
+    ngQuillConfigProvider.set({placeholder: 'Hello this is new', imageHandler: imageHandler})
+    console.log(ngQuillConfigProvider);
+
+
     $locationProvider.html5Mode(true)
     $stateProvider
       .state('layout', {
