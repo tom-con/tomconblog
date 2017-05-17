@@ -18,4 +18,12 @@ router.get('/:id', function(req, res, next) {
     })
 });
 
+router.post('/', function(req, res, next) {
+  knex('posts')
+    .insert(req.body, '*')
+    .then((posts) => {
+      res.status(200).send(posts[0]);
+    })
+});
+
 module.exports = router;

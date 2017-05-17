@@ -6,11 +6,13 @@
       templateUrl: './js/navbar/navbar.html'
     })
 
-    function controller(){
+    controller.$inject = ['$state']
+    function controller($state){
       const vm = this
       vm.$onInit = onInit
 
       function onInit(){
+        console.log($state.$current.name);
       }
 
     }

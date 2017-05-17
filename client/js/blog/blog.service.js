@@ -8,13 +8,18 @@
   function service($http) {
     const sv = this
     sv.getPosts = getPosts
+    sv.addPost = addPost
 
     function getPosts(){
       return $http.get('/api/posts').then(posts => {
-        console.log(posts);
         return posts.data
       })
     }
-
+    function addPost(data){
+      return $http.post('/api/posts', data).then(post => {
+        console.log(post);
+        return post.data
+      })
+    }
   }
 }())

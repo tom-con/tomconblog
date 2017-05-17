@@ -4,7 +4,6 @@ exports.up = function(knex, Promise) {
     tbl.increments()
     tbl.string('title').notNullable().unique()
     tbl.text('body').notNullable()
-    tbl.integer('author').notNullable().references('users.id')
     tbl.timestamps(true, true)
   })
 };

@@ -73,14 +73,14 @@ body {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #000000;
-  background-color: #ffffff;
+  color: #bd1550;
+  background-color: #222222;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #000000;
-  background-color: #ffffff;
+  color: #bd1550;
+  background-color: #222222;
 }
 .navbar-default .dropdown ul.dropdown-menu > li > a {
   color: #454545;
@@ -800,4 +800,12 @@ footer.entry-meta .meta-in {
   .container {
     max-width: 1080px;
   }
+}
+
+/*Quill*/
+[ng-quill-editor] {
+  display: block;
+}
+.blogForm {
+  padding: 10px;
 }

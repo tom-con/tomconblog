@@ -49,6 +49,12 @@
         parent:'content',
         component: 'projects',
       })
+      .state('quill', {
+        name: 'quill',
+        url: '/newPost',
+        parent:'content',
+        component: 'quill',
+      })
       .state('footr', {
         name: 'footr',
         abstract:true,
