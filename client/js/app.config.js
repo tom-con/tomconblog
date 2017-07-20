@@ -7,12 +7,8 @@
 
   function config($stateProvider, $urlRouterProvider, $locationProvider, ngQuillConfigProvider) {
     console.log(ngQuillConfigProvider);
-    function imageHandler(image){
-      console.log("hi");
-      console.log(image);
-    }
-    ngQuillConfigProvider.set({placeholder: 'Hello this is new', imageHandler: imageHandler})
-    console.log(ngQuillConfigProvider);
+
+
 
 
     $locationProvider.html5Mode(true)
@@ -24,49 +20,49 @@
       })
       .state('headr', {
         name: 'headr',
-        abstract:true,
+        abstract: true,
         parent: 'layout',
         component: 'headr',
       })
       .state('navbar', {
         name: 'navbar',
-        abstract:true,
-        parent:'headr',
+        abstract: true,
+        parent: 'headr',
         component: 'navbar',
       })
       .state('content', {
         name: 'content',
-        abstract:true,
+        abstract: true,
         parent: 'layout',
         component: 'content',
       })
       .state('splash', {
         name: 'splash',
         url: '/',
-        parent:'content',
+        parent: 'content',
         component: 'splash',
       })
       .state('blog', {
         name: 'blog',
         url: '/blog',
-        parent:'content',
+        parent: 'content',
         component: 'blog',
       })
       .state('projects', {
         name: 'projects',
         url: '/projects',
-        parent:'content',
+        parent: 'content',
         component: 'projects',
       })
       .state('quill', {
         name: 'quill',
         url: '/newPost',
-        parent:'content',
+        parent: 'content',
         component: 'quill',
       })
       .state('footr', {
         name: 'footr',
-        abstract:true,
+        abstract: true,
         parent: 'layout',
         component: 'footr',
       })

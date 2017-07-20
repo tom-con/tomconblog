@@ -9,6 +9,7 @@ exports.up = function(knex, Promise) {
     tbl.string('image_url').notNullable()
     tbl.string('deployment_url').notNullable()
     tbl.string('github_url').notNullable()
+    tbl.string('video_url')
     tbl.timestamps(true, true)
   })
 };

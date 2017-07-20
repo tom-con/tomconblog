@@ -10,34 +10,35 @@
 
   <div class="row section featured topspace">
     <h2 class="section-title"><span>What I Can Do Well</span></h2>
+    <h4 class="col-sm-12 col-md-6 text-center">Hard Skills</h4><h4 class="col-sm-12 col-md-6 text-center  ">Soft Skills</h4>
     <div class="row">
       <div class="col-sm-6 col-md-3">
         <h4 class="text-center"><i class="fa fa-code fa-2x"></i></h4>
-        <h3 class="text-center">Full Stack Web Development</h3>
-        <p>I create full websites: top to bottom, front to back. I write quality code which is easily read and understood for people on my team and future developers to inherit. I deliver deployable instances of a product often by utilizing an <a href="https://en.wikipedia.org/wiki/Agile_software_development">Agile workflow</a>.
-          It excites me to build something beautiful. Take a moment to read how I created this site.</p>
-        <p class="text-center"><a href="" class="btn btn-action">Read more</a></p>
+        <h3 class="text-center">Full Stack Development</h3>
+        <p><strong>Front-end:</strong> AngularJS, Angular, React, Javascript, Bootstrap, Materialize <hr>
+           <strong>Back-end:</strong> Node.js, Express.js, Python, Flask, PostgreSQL <hr>
+           <strong>Other:</strong> I use an <a href="https://en.wikipedia.org/wiki/Agile_software_development">Agile workflow</a> when working on teams and I like to have fun when I'm building cool products. </p>
+        <!-- <p class="text-center"><a href="" class="btn btn-action">Read more</a></p> -->
       </div>
       <div class="col-sm-6 col-md-3">
-        <h4 class="text-center"><i class="fa fa-database fa-2x"></i></h4>
-        <h3 class="text-center">Database Architecture</h3>
-        <p>One of my favorite components of web development is definitely the database. At the moment I am a fiend for PostgreSQL, especially creating complicated relationships between multitudes of tables. Check out my story of the most complicated database
-          architecture I've made so far.</p>
-        <p class="text-center"><a href="" class="btn btn-action">Read more</a></p>
+        <h4 class="text-center"><i class="fa fa-flask fa-2x"></i></h4>
+        <h3 class="text-center">Virtual Reality Experiences</h3>
+        <p><strong>Technologies:</strong> Unity, C#, SteamVR, HTC Vive, Oculus Rift <hr>
+           Virtual reality is not just the future of content delivery, it will disrupt many of the industries we recognize today.</p>
+        <!-- <p class="text-center"><a href="" class="btn btn-action">Read more</a></p> -->
       </div>
       <div class="col-sm-6 col-md-3">
         <h4 class="text-center"><i class="fa fa-superpowers fa-2x"></i></h4>
         <h3 class="text-center">Mindful Leadership</h3>
         <p>I think one of the most important aspects of my development has been studying Buddhist and Contemplative Psychology at <a href="https://www.naropa.edu">Naropa Univirsity</a>. The techniques, philosophies, and daily practices I have incorporated
-          into my life make me a strong and stable leader. Let me tell you about the journey getting there.</p>
-        <p class="text-center"><a href="" class="btn btn-action">Read more</a></p>
+          into my life make me a strong and stable leader.</p>
+        <!-- <p class="text-center"><a href="" class="btn btn-action">Read more</a></p> -->
       </div>
       <div class="col-sm-6 col-md-3">
         <h4 class="text-center"><i class="fa fa-cogs fa-2x"></i></h4>
         <h3 class="text-center">Learning Anything</h3>
-        <p>Beyond any other hard or soft skill, the most valuable to me is being confident in my ability to learn. It took a long time to get there, and the journey was tough, but now I have no hesitation in saying I can learn anything. I may never be a
-          concert pianist or speak Mongolian with perfect fluency, but I bet I could get pretty close. Here's the steps it took me to get there.</p>
-        <p class="text-center"><a href="" class="btn btn-action">Read more</a></p>
+        <p>Beyond any other hard or soft skill, the most valuable to me is being confident in my ability to learn. It took a long time to build as a skill, and the journey was tough, but now I have no hesitation in saying I can learn. I may never be a concert pianist or speak Mongolian with perfect fluency, but I bet I could get far.</p>
+        <!-- <p class="text-center"><a href="" class="btn btn-action">Read more</a></p> -->
       </div>
     </div>
   </div>
@@ -49,7 +50,20 @@
 
     <div class="thumbnails recentworks row">
 
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 previews">
+      <div ng-repeat="project in $ctrl.projects" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <a class="thumbnail" href="{{ project.video_url }}">
+          <span class="img">
+            <img src="{{ project.image_url }}" alt="">
+            <span class="cover"><span class="more">See video &rarr;</span></span>
+          </span>
+          <span class="title">{{ project.title }}</span><br><span> {{ project.tagline }}</span>
+        </a>
+        <span class="details"><a href="{{ project.deployment_url }}">Deployment</a> | <a href="{{ project.github_url }}">Github</a></span>
+        <h4></h4>
+        <p>{{ project.description }}</p>
+      </div>
+
+      <!-- <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 previews">
         <a class="thumbnail" href="sidebar-right.html">
           <span class="img">
             <img src="/images/changes.png" alt="">
@@ -86,7 +100,7 @@
         <span class="details"><a href="http://mosaix.herokuapp.com/">Deployment</a> | <a href="https://github.com/tom-con/mosaix">Github</a></span>
         <h4></h4>
         <p>A web app with full CRUD ability built on RESTful principles that allows 2D game developers to create/edit/share sprites within a niche social network.</p>
-      </div>
+      </div> -->
 
   </div>
   <!-- /section -->

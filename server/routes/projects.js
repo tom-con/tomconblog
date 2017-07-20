@@ -4,6 +4,9 @@ const knex = require('../db/knex.js')
 
 router.get('/', function(req, res, next) {
   knex('projects')
+    .select('*')
+    .orderBy('id', 'DESC')
+    .limit(req.query.limit ? req.query.limit : 20)
     .then((projects) => {
       res.status(200).send(projects);
     })

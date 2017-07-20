@@ -12,7 +12,7 @@
       vm.$onInit = onInit
 
       function onInit(){
-        console.log($state.$current.name);
+        console.log("current state", $state.$current.name);
       }
 
     }

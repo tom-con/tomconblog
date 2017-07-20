@@ -6,8 +6,22 @@
       templateUrl: './js/splash/splash.html'
     })
 
-    function controller(){
+    controller.$inject = ['splashService']
+    function controller(splashService){
       const vm = this
+      vm.$onInit = onInit
+
+
+      function onInit(){
+        getProjects()
+      }
+
+
+      function getProjects() {
+        splashService.getProjects().then(projects => {
+          vm.projects = projects
+        })
+      }
     }
 
 }())
