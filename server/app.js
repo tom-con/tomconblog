@@ -18,6 +18,10 @@ app.use(express.static(path.join(__dirname, '/../', 'node_modules')))
 app.use('/api/posts', posts)
 app.use('/api/projects', projects)
 
+app.get('/.well-known/acme-challenge/:id', function(req,res,next){
+  res.send('37AQAG3_He_TttGgyjY2EFLFXGrLmNpRlFtWbDq4k8s.UXaBek0LTxURgwEmbrG-JWgu-v2FqgHgo3T2j7atomY');
+})
+
 app.use('*', function(req, res) {
   res.sendFile('index.html', {
     root: path.join(__dirname, '/../client')
